@@ -14,8 +14,14 @@ PrintManager::PrintManager() {
         Ball(4,5)
     };
 
-
+    while(true) {
+        printMap();
+        balls[0].x+=1;
+        getch();
+    }
+    balls[0].x=7;
     printMap();
+    getch();
     endwin(); //4
 }
 
@@ -28,7 +34,7 @@ void PrintManager::printMap() {
         printw("\n");
     }
     drawBalls();
-    getch();
+    move(0,0);
 }
 
 void PrintManager::drawBalls() {
@@ -39,6 +45,7 @@ void PrintManager::drawBalls() {
         move(x,y);
         addch(balls[i].symbol);
     }
+
 }
 
 
