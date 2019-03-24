@@ -2,6 +2,7 @@
 // Created by wilk on 24.03.19.
 //
 
+
 #include "PrintManager.h"
 
 PrintManager::PrintManager() {
@@ -14,15 +15,7 @@ PrintManager::PrintManager() {
         Ball(4,5)
     };
 
-    while(true) {
-        printMap();
-        balls[0].x+=1;
-        getch();
-    }
-    balls[0].x=7;
-    printMap();
-    getch();
-    endwin(); //4
+    print(170);
 }
 
 void PrintManager::printMap() {
@@ -33,7 +26,6 @@ void PrintManager::printMap() {
         }
         printw("\n");
     }
-    drawBalls();
     move(0,0);
 }
 
@@ -47,5 +39,19 @@ void PrintManager::drawBalls() {
     }
 
 }
+    void PrintManager::print(int fresh) {
+        while(true)
+        {
+        usleep(fresh*1000);
+        printMap();
+        balls[0].x+=1;
+        if(balls[0].x>=map->sizeX)
+            balls[0].x=1;
+        drawBalls();
+        move(0,0);
+        refresh();
+        }
+    }
+
 
 

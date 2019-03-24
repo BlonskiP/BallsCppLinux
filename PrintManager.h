@@ -8,6 +8,7 @@
 #include <ncurses.h>
 #include "Map.h"
 #include "Ball.h"
+#include <unistd.h>
 
 class PrintManager {
 
@@ -17,7 +18,7 @@ public:
     Ball *balls;
     void printMap();
     void drawBalls();
-
+    void print(int fresh);
 };
 
 
