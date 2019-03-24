@@ -6,11 +6,11 @@
 
 PrintManager::PrintManager() {
     initscr();
-
+    noecho();
     map=new Map(20,50);
     balls = new Ball[3]{
         Ball(3,4),
-        Ball(3,4),
+        Ball(5,4),
         Ball(4,5)
     };
 
@@ -27,8 +27,8 @@ void PrintManager::printMap() {
         }
         printw("\n");
     }
-  //  drawBalls();
-
+    drawBalls();
+    getch();
 }
 
 void PrintManager::drawBalls() {
