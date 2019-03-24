@@ -9,10 +9,16 @@ PrintManager::PrintManager() {
     initscr();
     noecho();
     map=new Map(20,50);
-    balls = new Ball[3]{
-        Ball(3,4),
-        Ball(5,4),
-        Ball(4,5)
+    balls = new Ball[9]{
+        Ball(1,1, map),
+        Ball(13,23, map),
+        Ball(14,7, map),
+        Ball(7,5, map),
+        Ball(17,9, map),
+        Ball(7,10, map),
+        Ball(5,1, map),
+        Ball(2,3, map),
+        Ball(2,34, map)
     };
 
     print(100);
@@ -30,7 +36,7 @@ void PrintManager::printMap() {
 }
 
 void PrintManager::drawBalls() {
-    for(int i=0;i<3;i++)
+    for(int i=0;i<9;i++)
     {
         int x=balls[i].x;
         int y=balls[i].y;
@@ -44,9 +50,6 @@ void PrintManager::drawBalls() {
         {
         usleep(fresh*1000);
         printMap();
-        balls[0].x+=1;
-        if(balls[0].x>=map->sizeX)
-            balls[0].x=1;
         drawBalls();
         move(0,0);
         refresh();

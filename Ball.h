@@ -6,14 +6,18 @@
 #define THREADBALLS_BALL_H
 #include <unistd.h>
 #include <thread>
+#include <vector>
+#include "Map.h"
 
 class Ball {
 public:
-    Ball(int x, int y);
+    Ball(int x, int y, Map *map);
     int x;
     int y;
     char symbol='o';
-    std::thread *movThread;
+    std::thread movThread;
+    std::vector<int> dir;
+    Map *map;
 private:
     void move();
 };
