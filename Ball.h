@@ -4,7 +4,8 @@
 
 #ifndef THREADBALLS_BALL_H
 #define THREADBALLS_BALL_H
-
+#include <unistd.h>
+#include <thread>
 
 class Ball {
 public:
@@ -12,7 +13,9 @@ public:
     int x;
     int y;
     char symbol='o';
-
+    std::thread *movThread;
+private:
+    void move();
 };
 
 

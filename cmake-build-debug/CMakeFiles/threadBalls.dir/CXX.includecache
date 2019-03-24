@@ -6,21 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.h
-
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.h
-
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/PrintManager.cpp
-PrintManager.h
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/PrintManager.h
-
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/PrintManager.h
-ncurses.h
--
-Map.h
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.h
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.cpp
 Ball.h
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.h
+
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.h
 unistd.h
+-
+thread
 -
 

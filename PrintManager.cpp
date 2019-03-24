@@ -15,7 +15,7 @@ PrintManager::PrintManager() {
         Ball(4,5)
     };
 
-    print(170);
+    print(100);
 }
 
 void PrintManager::printMap() {
