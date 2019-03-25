@@ -5,21 +5,21 @@
 
 #include "PrintManager.h"
 
-PrintManager::PrintManager() {
+PrintManager::PrintManager(int amount) {
     initscr();
     noecho();
     map=new Map(20,50);
-    balls = new Ball[9]{
-        Ball(1,1, map),
-        Ball(13,23, map),
-        Ball(14,7, map),
-        Ball(7,5, map),
-        Ball(17,9, map),
-        Ball(7,10, map),
-        Ball(5,1, map),
-        Ball(2,3, map),
-        Ball(2,34, map)
-    };
+    int randX;
+    int randY;
+    for(int i=0;i<amount;i++)
+    {
+        randX=rand() % 17 +2;
+        randY=rand() % 47 +2;
+    balls.push_back(new Ball(randX,randY,map,i));
+
+    }
+
+
 
     print(100);
 }
@@ -36,19 +36,18 @@ void PrintManager::printMap() {
 }
 
 void PrintManager::drawBalls() {
-    for(int i=0;i<9;i++)
+    for(int i=0;i<balls.size();i++)
     {
-        int x=balls[i].x;
-        int y=balls[i].y;
+        int x=balls[i]->x;
+        int y=balls[i]->y;
         move(x,y);
-        addch(balls[i].symbol);
+        addch(balls[i]->symbol);
     }
 
 }
     void PrintManager::print(int fresh) {
         while(true)
         {
-        usleep(fresh*1000);
         printMap();
         drawBalls();
         move(0,0);

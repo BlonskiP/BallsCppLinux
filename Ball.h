@@ -11,15 +11,18 @@
 
 class Ball {
 public:
-    Ball(int x, int y, Map *map);
+    Ball(int x, int y, Map *map,int sleepTime);
     int x;
     int y;
+    int sleepTime;
     char symbol='o';
     std::thread movThread;
     std::vector<int> dir;
     Map *map;
 private:
     void move();
+    void moveForward(int xForward, int yForward);
+    void checkDirections();
 };
 
 

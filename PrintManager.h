@@ -9,13 +9,15 @@
 #include "Map.h"
 #include "Ball.h"
 #include <unistd.h>
+#include <vector>
 
 class PrintManager {
 
 public:
-    PrintManager();
+    PrintManager(int amount);
     Map *map;
-    Ball *balls;
+    std::vector<Ball*> balls;
+    int nBalls;
     void printMap();
     void drawBalls();
     void print(int fresh);

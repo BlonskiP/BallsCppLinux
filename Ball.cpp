@@ -4,26 +4,79 @@
 
 #include "Ball.h"
 using namespace std;
-Ball::Ball(int x, int y, Map *map) {
+Ball::Ball(int x, int y, Map *map, int sleepTime) {
     this->x=x;
     this->y=y;
     this->map=map;
     movThread=thread(&Ball::move,this);
-    dir.insert(dir.begin(),3);
-    dir.insert(dir.end(),1);
+    int xdir=rand() % 5;
+    int ydir=rand() % 5;
+    dir.insert(dir.begin(),xdir);
+    dir.insert(dir.end(),ydir);
+    this->sleepTime=sleepTime;
 
 }
 
 void Ball::move() {
+    sleep(sleepTime);
    while(true) {
-       usleep(10*10000);
-       x+=dir[0];
-       y+=dir[1];
-       if(x<=1 || x>=map->sizeX-2)
-           dir[0]*=(-1);
-       if(y<=1 || y>=map->sizeY-2)
-           dir[1]*=(-1);
+       usleep(10 * 10000);
+       int xStep = abs(dir[0]);
+       int yStep = abs(dir[1]);
+       int xStepsDone=0;
+       int yStepsDone=0;
+       int xForward=0;
+       int yForward=0;
 
 
+           while(xStepsDone<=xStep && yStepsDone<=yStep)
+           {
+                checkDirections();
+                if(dir[0]>0)
+                    xForward=1;
+                else if(dir[0]<0)
+                    xForward=(-1);
+                else if(dir[0]==0)
+                    xForward=0;
+
+               if(dir[1]>0)
+                   yForward=1;
+               else if(dir[1]<0)
+                   yForward=(-1);
+               else if(dir[1]==0)
+                   yForward=0;
+
+               moveForward(xForward,yForward);
+
+               xStepsDone++;
+               yStepsDone++;
+
+
+           }
    }
 }
+
+void Ball::moveForward(int xForward, int yForward) {
+    if(xForward>0) x+=1;
+    else if (xForward<0) x-=1;
+
+    if(yForward>0) y+=1;
+    else if(yForward<0)
+        y-=1;
+}
+
+void Ball::checkDirections() {
+    if(x>=map->sizeX-1 || x<=1)
+    {
+        dir[0]*=(-1);
+    }
+
+
+    if(y>=map->sizeY-1 || y<=1)
+    {
+        dir[1]*=(-1);
+    }
+
+}
+
+
