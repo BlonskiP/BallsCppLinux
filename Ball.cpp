@@ -3,6 +3,8 @@
 //
 
 #include "Ball.h"
+#include "PrintManager.h"
+
 using namespace std;
 Ball::Ball(int x, int y, Map *map, int sleepTime) {
     this->x=x;
@@ -19,7 +21,7 @@ Ball::Ball(int x, int y, Map *map, int sleepTime) {
 
 void Ball::move() {
     sleep(sleepTime);
-   while(true) {
+   while(PrintManager::run) {
        usleep(10 * 10000);
        int xStep = abs(dir[0]);
        int yStep = abs(dir[1]);
@@ -54,6 +56,7 @@ void Ball::move() {
 
            }
    }
+   
 }
 
 void Ball::moveForward(int xForward, int yForward) {

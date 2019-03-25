@@ -9,6 +9,7 @@
 #include <vector>
 #include "Map.h"
 
+
 class Ball {
 public:
     Ball(int x, int y, Map *map,int sleepTime);

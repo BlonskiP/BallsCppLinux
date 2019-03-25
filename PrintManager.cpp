@@ -4,13 +4,14 @@
 
 
 #include "PrintManager.h"
-
+bool PrintManager::run=true;
 PrintManager::PrintManager(int amount) {
     initscr();
     noecho();
     map=new Map(20,50);
     int randX;
     int randY;
+    escapeThread=std::thread(&PrintManager::escapeListen,this);
     for(int i=0;i<amount;i++)
     {
         randX=rand() % 17 +2;
@@ -18,6 +19,7 @@ PrintManager::PrintManager(int amount) {
     balls.push_back(new Ball(randX,randY,map,i));
 
     }
+
 
 
 
@@ -46,14 +48,33 @@ void PrintManager::drawBalls() {
 
 }
     void PrintManager::print(int fresh) {
-        while(true)
+        while(PrintManager::run)
         {
         printMap();
         drawBalls();
         move(0,0);
         refresh();
+
+        }
+
+        escapeThread.join();
+        for(int i=0;i<balls.size();i++)
+            balls[i]->movThread.join();
+        erase();
+        refresh();
+        printw("Threads joined. \n Press any key");
+        getch();
+        endwin();
+    }
+
+void PrintManager::escapeListen() {
+    while(run)
+    {
+        if(getch()=='q')
+        {run=false;
         }
     }
+}
 
 
 
