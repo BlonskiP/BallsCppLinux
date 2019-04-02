@@ -8,6 +8,7 @@ bool PrintManager::run=true;
 PrintManager::PrintManager(int amount) {
     initscr();
     noecho();
+    //set cursor na 0
     map=new Map(20,50);
     int randX;
     int randY;
@@ -16,6 +17,9 @@ PrintManager::PrintManager(int amount) {
     {
         randX=rand() % 17 +2;
         randY=rand() % 47 +2;
+        //randX=0;
+        //randY=0;
+
     balls.push_back(new Ball(randX,randY,map,i));
 
     }
@@ -27,6 +31,7 @@ PrintManager::PrintManager(int amount) {
 }
 
 void PrintManager::printMap() {
+    move(0,0);
     for(int x=0;x<map->sizeX;x++) {
         for (int y = 0; y < map->sizeY; y++) {
             char mapTile = map->charMap[x][y];
@@ -50,9 +55,10 @@ void PrintManager::drawBalls() {
     void PrintManager::print(int fresh) {
         while(PrintManager::run)
         {
+            //dodac sleepa co 40ms
         printMap();
         drawBalls();
-        move(0,0);
+        //move(0,0);
         refresh();
 
         }

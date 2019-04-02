@@ -11,18 +11,22 @@ Ball::Ball(int x, int y, Map *map, int sleepTime) {
     this->y=y;
     this->map=map;
     movThread=thread(&Ball::move,this);
-    int xdir=rand() % 5;
-    int ydir=rand() % 5;
+    int xdir=0;
+    int ydir=0;
+    while(xdir==0 && ydir==0){xdir=rand() %3;ydir=rand() %3;}
     dir.insert(dir.begin(),xdir);
     dir.insert(dir.end(),ydir);
+    if(rand()%10 /5)
+        this->checkDirections();
     this->sleepTime=sleepTime;
 
 }
 
 void Ball::move() {
+    //sleep z thread uzywac
     sleep(sleepTime);
    while(PrintManager::run) {
-       usleep(10 * 10000);
+       usleep(10 * 10000);//sleep z thread uzywac
        int xStep = abs(dir[0]);
        int yStep = abs(dir[1]);
        int xStepsDone=0;
