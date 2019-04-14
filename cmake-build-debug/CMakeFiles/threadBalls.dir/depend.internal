@@ -4,18 +4,28 @@
 CMakeFiles/threadBalls.dir/Ball.cpp.o
  /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.cpp
  /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.h
+ /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/CollidingItem.h
  /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.h
  /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/PrintManager.h
+CMakeFiles/threadBalls.dir/CollidingItem.cpp.o
+ /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.h
+ /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/CollidingItem.cpp
+ /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/CollidingItem.h
+ /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.h
 CMakeFiles/threadBalls.dir/Map.cpp.o
+ /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.h
+ /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/CollidingItem.h
  /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.cpp
  /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.h
 CMakeFiles/threadBalls.dir/PrintManager.cpp.o
  /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.h
+ /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/CollidingItem.h
  /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.h
  /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/PrintManager.cpp
  /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/PrintManager.h
 CMakeFiles/threadBalls.dir/main.cpp.o
  /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.h
+ /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/CollidingItem.h
  /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.h
  /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/PrintManager.h
  /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/main.cpp

@@ -5,14 +5,17 @@
 #ifndef THREADBALLS_MAP_H
 #define THREADBALLS_MAP_H
 
+#include <vector>
+#include "CollidingItem.h"
 
 
+class CollidingItem;
 class Map {
 public:
     int sizeX;
     int sizeY;
     char** charMap;
-
+    std::vector<CollidingItem> *colItemsVector;
     Map(int x, int y);
 
 };

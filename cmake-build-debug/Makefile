@@ -150,6 +150,33 @@ Ball.cpp.s:
 	$(MAKE) -f CMakeFiles/threadBalls.dir/build.make CMakeFiles/threadBalls.dir/Ball.cpp.s
 .PHONY : Ball.cpp.s
 
+CollidingItem.o: CollidingItem.cpp.o
+
+.PHONY : CollidingItem.o
+
+# target to build an object file
+CollidingItem.cpp.o:
+	$(MAKE) -f CMakeFiles/threadBalls.dir/build.make CMakeFiles/threadBalls.dir/CollidingItem.cpp.o
+.PHONY : CollidingItem.cpp.o
+
+CollidingItem.i: CollidingItem.cpp.i
+
+.PHONY : CollidingItem.i
+
+# target to preprocess a source file
+CollidingItem.cpp.i:
+	$(MAKE) -f CMakeFiles/threadBalls.dir/build.make CMakeFiles/threadBalls.dir/CollidingItem.cpp.i
+.PHONY : CollidingItem.cpp.i
+
+CollidingItem.s: CollidingItem.cpp.s
+
+.PHONY : CollidingItem.s
+
+# target to generate assembly for a file
+CollidingItem.cpp.s:
+	$(MAKE) -f CMakeFiles/threadBalls.dir/build.make CMakeFiles/threadBalls.dir/CollidingItem.cpp.s
+.PHONY : CollidingItem.cpp.s
+
 Map.o: Map.cpp.o
 
 .PHONY : Map.o
@@ -243,6 +270,9 @@ help:
 	@echo "... Ball.o"
 	@echo "... Ball.i"
 	@echo "... Ball.s"
+	@echo "... CollidingItem.o"
+	@echo "... CollidingItem.i"
+	@echo "... CollidingItem.s"
 	@echo "... Map.o"
 	@echo "... Map.i"
 	@echo "... Map.s"

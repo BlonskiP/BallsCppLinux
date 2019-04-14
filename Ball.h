@@ -4,12 +4,13 @@
 
 #ifndef THREADBALLS_BALL_H
 #define THREADBALLS_BALL_H
+
 #include <unistd.h>
 #include <thread>
 #include <vector>
 #include "Map.h"
 
-
+class Map;
 class Ball {
 public:
     Ball(int x, int y, Map *map,int sleepTime);
