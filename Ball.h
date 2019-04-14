@@ -4,6 +4,7 @@
 
 #ifndef THREADBALLS_BALL_H
 #define THREADBALLS_BALL_H
+
 #include <unistd.h>
 #include <thread>
 #include <vector>

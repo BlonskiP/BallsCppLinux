@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/threadBalls.dir/PrintManager.cpp.o"
   "CMakeFiles/threadBalls.dir/Ball.cpp.o"
   "CMakeFiles/threadBalls.dir/Map.cpp.o"
+  "CMakeFiles/threadBalls.dir/CollidingItem.cpp.o"
   "threadBalls.pdb"
   "threadBalls"
 )
