@@ -7,9 +7,9 @@
 
 
 #include "Ball.h"
-
+class Ball;
 class CollidingItem {
-    virtual bool isColliding(Ball ball) = 0;
+    virtual bool isColliding(Ball ball)=0;
 };
 
 

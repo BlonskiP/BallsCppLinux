@@ -9,13 +9,13 @@
 #include "CollidingItem.h"
 
 
-
+class CollidingItem;
 class Map {
 public:
     int sizeX;
     int sizeY;
     char** charMap;
-    std::vector<CollidingItem> colItemsVector;
+    std::vector<CollidingItem> *colItemsVector;
     Map(int x, int y);
 
 };
