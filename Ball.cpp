@@ -23,8 +23,8 @@ Ball::Ball(int x, int y, Map *map, int sleepTime) {
 }
 
 void Ball::move() {
-    //sleep z thread uzywac
-    sleep(sleepTime);
+    auto sleeper = (std::chrono::duration<int>) sleepTime;
+    this_thread::sleep_for(sleeper);
    while(PrintManager::run) {
        usleep(10 * 10000);//sleep z thread uzywac
        int xStep = abs(dir[0]);

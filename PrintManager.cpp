@@ -64,8 +64,9 @@ void PrintManager::drawBalls() {
         }
 
         escapeThread.join();
-        for(int i=0;i<balls.size();i++)
+        for(int i=0;i<balls.size();i++) {
             balls[i]->movThread.join();
+        }
         erase();
         refresh();
         printw("Threads joined. \n Press any key");
