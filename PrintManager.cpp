@@ -10,6 +10,7 @@ PrintManager::PrintManager(int amount) {
     initscr();
     noecho();
     //set cursor na 0
+    curs_set(0);
     map=new Map(20,50);
     int randX;
     int randY;
@@ -56,7 +57,7 @@ void PrintManager::drawBalls() {
     void PrintManager::print(int fresh) {
         while(PrintManager::run)
         {
-            //dodac sleepa co 40ms
+            usleep(40000);
         printMap();
         drawBalls();
         //move(0,0);
