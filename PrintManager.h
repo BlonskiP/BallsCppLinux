@@ -22,6 +22,7 @@ public:
     static bool run;
     static std::condition_variable cv_run;
     std::thread escapeThread;
+    static std::mutex runMutex;
     int nBalls;
     void printMap();
     void drawBalls();

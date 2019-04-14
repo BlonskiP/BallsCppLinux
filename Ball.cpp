@@ -25,14 +25,9 @@ Ball::Ball(int x, int y, Map *map, int sleepTime) {
 
 void Ball::move() {
     mutex cv_m;
-    std::mutex mtx;
-    std::unique_lock<std::mutex> lck(mtx);
-    auto sleeper = chrono::steady_clock::now() + sleepTime*1000ms;
-    while (PrintManager::cv_run.wait_for(lck,std::chrono::seconds(sleepTime))==cv_status::no_timeout) {
-        //can do stuff here :D
-    //    cout<<"Waiting: "<<this->movThread.get_id()<<endl;
-    }
-
+    std::unique_lock<std::mutex> lck(PrintManager::runMutex);
+    PrintManager::cv_run.wait_for(lck,std::chrono::seconds(sleepTime));
+    lck.unlock();
 
 
    while(PrintManager::run) {

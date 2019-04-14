@@ -3,9 +3,11 @@
 //
 
 
+#include <iostream>
 #include "PrintManager.h"
 bool PrintManager::run=true;
 std::condition_variable PrintManager::cv_run;
+std::mutex PrintManager::runMutex;
 PrintManager::PrintManager(int amount) {
     initscr();
     noecho();
@@ -66,8 +68,6 @@ void PrintManager::drawBalls() {
         }
 
         escapeThread.join();
-
-
         for(int i=0;i<balls.size();i++) {
             balls[i]->movThread.join();
         }
@@ -82,8 +82,9 @@ void PrintManager::escapeListen() {
     while(run)
     {
         if(getch()=='q')
-        {run=false;
-         cv_run.notify_all();
+        {
+        run=false;
+            PrintManager::cv_run.notify_all();
         }
     }
 }
