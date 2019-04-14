@@ -24,12 +24,9 @@ Ball::Ball(int x, int y, Map *map, int sleepTime) {
 }
 
 void Ball::move() {
-    mutex cv_m;
     std::unique_lock<std::mutex> lck(PrintManager::runMutex);
     PrintManager::cv_run.wait_for(lck,std::chrono::seconds(sleepTime));
     lck.unlock();
-
-
    while(PrintManager::run) {
        usleep(10 * 10000);//sleep z thread uzywac
        int xStep = abs(dir[0]);
