@@ -5,6 +5,7 @@
 
 #include "PrintManager.h"
 bool PrintManager::run=true;
+std::condition_variable PrintManager::cv_run;
 PrintManager::PrintManager(int amount) {
     initscr();
     noecho();
@@ -64,6 +65,8 @@ void PrintManager::drawBalls() {
         }
 
         escapeThread.join();
+
+
         for(int i=0;i<balls.size();i++) {
             balls[i]->movThread.join();
         }
@@ -79,6 +82,7 @@ void PrintManager::escapeListen() {
     {
         if(getch()=='q')
         {run=false;
+         cv_run.notify_all();
         }
     }
 }

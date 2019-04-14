@@ -11,6 +11,8 @@
 #include <unistd.h>
 #include <vector>
 #include <thread>
+#include <condition_variable>
+
 class PrintManager {
 
 public:
@@ -18,6 +20,7 @@ public:
     Map *map;
     std::vector<Ball*> balls;
     static bool run;
+    static std::condition_variable cv_run;
     std::thread escapeThread;
     int nBalls;
     void printMap();

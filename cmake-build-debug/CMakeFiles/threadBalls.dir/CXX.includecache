@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.cpp
+iostream
+-
+Ball.h
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.h
+PrintManager.h
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/PrintManager.h
+
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.h
 unistd.h
 -
@@ -17,10 +25,6 @@ Map.h
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.h
 
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.h
-
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/PrintManager.cpp
-PrintManager.h
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/PrintManager.h
 
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/PrintManager.h
 ncurses.h
@@ -34,5 +38,7 @@ unistd.h
 vector
 -
 thread
+-
+condition_variable
 -
 
