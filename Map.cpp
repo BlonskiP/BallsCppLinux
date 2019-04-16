@@ -3,9 +3,9 @@
 //
 
 #include "Map.h"
+#include "Wall.h"
 
 Map::Map(int x, int y) {
-    this->colItemsVector = new std::vector<CollidingItem>();
     sizeX= x;
     sizeY= y;
     charMap=new char*[x];
@@ -22,8 +22,24 @@ Map::Map(int x, int y) {
             else
                 charMap[i][k]=' ';
         }
+
+      auto it = colItemsVector.begin();
+      CollidingItem* rightWall = new Wall(0,20,50,50);
+      CollidingItem* leftWall = new Wall(0,20,0,0);
+      //colItemsVector.insert(it,rightWall);
+     // colItemsVector.insert(it,leftWall);
+      CollidingItem* upWall = new Wall(0,0,0,30);
+      //colItemsVector.insert(it,upWall);
+      CollidingItem* downWall = new Wall(30,30,0,30);
+      colItemsVector.insert(it,downWall);
 }
 
-void Map::collisionCheck(Ball ball) {
-    
+void Map::collisionCheck(Ball &ball) {
+    for(auto colidingItem : colItemsVector)
+    {
+        if(colidingItem->isColliding(ball))
+        {
+            colidingItem->colision(ball);
+        }
+    }
 }

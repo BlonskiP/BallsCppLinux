@@ -15,8 +15,8 @@ public:
     int sizeX;
     int sizeY;
     char** charMap;
-    std::vector<CollidingItem> *colItemsVector;
-    void collisionCheck(Ball ball);
+    std::vector<CollidingItem*> colItemsVector;
+    void collisionCheck(Ball &ball);
     Map(int x, int y);
 
 };

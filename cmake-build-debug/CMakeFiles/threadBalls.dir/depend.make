@@ -16,6 +16,7 @@ CMakeFiles/threadBalls.dir/Map.cpp.o: ../Ball.h
 CMakeFiles/threadBalls.dir/Map.cpp.o: ../CollidingItem.h
 CMakeFiles/threadBalls.dir/Map.cpp.o: ../Map.cpp
 CMakeFiles/threadBalls.dir/Map.cpp.o: ../Map.h
+CMakeFiles/threadBalls.dir/Map.cpp.o: ../Wall.h
 
 CMakeFiles/threadBalls.dir/PrintManager.cpp.o: ../Ball.h
 CMakeFiles/threadBalls.dir/PrintManager.cpp.o: ../CollidingItem.h

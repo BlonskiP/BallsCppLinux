@@ -7,16 +7,18 @@
 
 
 #include "CollidingItem.h"
-
+#include <ncurses.h>
 class Wall : public CollidingItem {
 
 public:
+    Wall(int startX, int endX, int startY, int endY);
     int startX;
     int endX;
     int startY;
     int endY;
-    bool isColliding(Ball ball) override;
-    void colision(Ball ball) override;
+    bool isColliding(Ball &ball) override;
+    void colision(Ball &ball) override;
+    void drawItem() override;
 };
 
 

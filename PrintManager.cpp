@@ -35,15 +35,11 @@ PrintManager::PrintManager(int amount) {
 }
 
 void PrintManager::printMap() {
-    move(0,0);
-    for(int x=0;x<map->sizeX;x++) {
-        for (int y = 0; y < map->sizeY; y++) {
-            char mapTile = map->charMap[x][y];
-            addch(mapTile);
-        }
-        printw("\n");
+    erase();
+    for(auto colItem : map->colItemsVector)
+    {
+        colItem->drawItem();
     }
-    move(0,0);
 }
 
 void PrintManager::drawBalls() {
