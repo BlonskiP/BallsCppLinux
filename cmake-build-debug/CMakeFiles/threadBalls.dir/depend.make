@@ -23,6 +23,12 @@ CMakeFiles/threadBalls.dir/PrintManager.cpp.o: ../Map.h
 CMakeFiles/threadBalls.dir/PrintManager.cpp.o: ../PrintManager.cpp
 CMakeFiles/threadBalls.dir/PrintManager.cpp.o: ../PrintManager.h
 
+CMakeFiles/threadBalls.dir/Wall.cpp.o: ../Ball.h
+CMakeFiles/threadBalls.dir/Wall.cpp.o: ../CollidingItem.h
+CMakeFiles/threadBalls.dir/Wall.cpp.o: ../Map.h
+CMakeFiles/threadBalls.dir/Wall.cpp.o: ../Wall.cpp
+CMakeFiles/threadBalls.dir/Wall.cpp.o: ../Wall.h
+
 CMakeFiles/threadBalls.dir/main.cpp.o: ../Ball.h
 CMakeFiles/threadBalls.dir/main.cpp.o: ../CollidingItem.h
 CMakeFiles/threadBalls.dir/main.cpp.o: ../Map.h

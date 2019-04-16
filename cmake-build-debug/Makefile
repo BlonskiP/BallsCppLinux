@@ -231,6 +231,33 @@ PrintManager.cpp.s:
 	$(MAKE) -f CMakeFiles/threadBalls.dir/build.make CMakeFiles/threadBalls.dir/PrintManager.cpp.s
 .PHONY : PrintManager.cpp.s
 
+Wall.o: Wall.cpp.o
+
+.PHONY : Wall.o
+
+# target to build an object file
+Wall.cpp.o:
+	$(MAKE) -f CMakeFiles/threadBalls.dir/build.make CMakeFiles/threadBalls.dir/Wall.cpp.o
+.PHONY : Wall.cpp.o
+
+Wall.i: Wall.cpp.i
+
+.PHONY : Wall.i
+
+# target to preprocess a source file
+Wall.cpp.i:
+	$(MAKE) -f CMakeFiles/threadBalls.dir/build.make CMakeFiles/threadBalls.dir/Wall.cpp.i
+.PHONY : Wall.cpp.i
+
+Wall.s: Wall.cpp.s
+
+.PHONY : Wall.s
+
+# target to generate assembly for a file
+Wall.cpp.s:
+	$(MAKE) -f CMakeFiles/threadBalls.dir/build.make CMakeFiles/threadBalls.dir/Wall.cpp.s
+.PHONY : Wall.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -279,6 +306,9 @@ help:
 	@echo "... PrintManager.o"
 	@echo "... PrintManager.i"
 	@echo "... PrintManager.s"
+	@echo "... Wall.o"
+	@echo "... Wall.i"
+	@echo "... Wall.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

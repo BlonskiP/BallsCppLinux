@@ -8,7 +8,7 @@
 #include <vector>
 #include "CollidingItem.h"
 
-
+class Ball;
 class CollidingItem;
 class Map {
 public:
@@ -16,6 +16,7 @@ public:
     int sizeY;
     char** charMap;
     std::vector<CollidingItem> *colItemsVector;
+    void collisionCheck(Ball ball);
     Map(int x, int y);
 
 };

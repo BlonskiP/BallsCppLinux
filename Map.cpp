@@ -5,6 +5,7 @@
 #include "Map.h"
 
 Map::Map(int x, int y) {
+    this->colItemsVector = new std::vector<CollidingItem>();
     sizeX= x;
     sizeY= y;
     charMap=new char*[x];
@@ -21,4 +22,8 @@ Map::Map(int x, int y) {
             else
                 charMap[i][k]=' ';
         }
+}
+
+void Map::collisionCheck(Ball ball) {
+    
 }

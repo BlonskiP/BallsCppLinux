@@ -64,6 +64,14 @@ thread
 condition_variable
 -
 
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Wall.cpp
+Wall.h
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Wall.h
+
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Wall.h
+CollidingItem.h
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/CollidingItem.h
+
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/main.cpp
 PrintManager.h
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/PrintManager.h

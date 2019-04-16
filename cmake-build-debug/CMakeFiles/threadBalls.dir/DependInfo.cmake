@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/CollidingItem.cpp" "/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/cmake-build-debug/CMakeFiles/threadBalls.dir/CollidingItem.cpp.o"
   "/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.cpp" "/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/cmake-build-debug/CMakeFiles/threadBalls.dir/Map.cpp.o"
   "/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/PrintManager.cpp" "/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/cmake-build-debug/CMakeFiles/threadBalls.dir/PrintManager.cpp.o"
+  "/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Wall.cpp" "/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/cmake-build-debug/CMakeFiles/threadBalls.dir/Wall.cpp.o"
   "/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/main.cpp" "/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/cmake-build-debug/CMakeFiles/threadBalls.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
