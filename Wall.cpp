@@ -18,7 +18,7 @@
 }
 
 Wall::Wall(int startX, int endX, int startY, int endY) {
-    this->startY=startX;
+    this->startX=startX;
     this->endX=endX;
     this->startY=startY;
     this->endY=endY;
@@ -34,6 +34,5 @@ void Wall::drawItem() {
         if(yPos<endY){yPos++;};
 
     }
-        move(0,0);
-
+        refresh();
 }

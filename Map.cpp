@@ -23,15 +23,15 @@ Map::Map(int x, int y) {
                 charMap[i][k]=' ';
         }
 
-      auto it = colItemsVector.begin();
+
       CollidingItem* rightWall = new Wall(0,20,50,50);
       CollidingItem* leftWall = new Wall(0,20,0,0);
-      //colItemsVector.insert(it,rightWall);
-     // colItemsVector.insert(it,leftWall);
-      CollidingItem* upWall = new Wall(0,0,0,30);
-      //colItemsVector.insert(it,upWall);
-      CollidingItem* downWall = new Wall(30,30,0,30);
-      colItemsVector.insert(it,downWall);
+      CollidingItem* upWall = new Wall(0,0,0,50);
+      CollidingItem* downWall = new Wall(20,20,0,50);
+      colItemsVector.push_back(rightWall);
+      colItemsVector.push_back(leftWall);
+      colItemsVector.push_back(upWall);
+      colItemsVector.push_back(downWall);
 }
 
 void Map::collisionCheck(Ball &ball) {

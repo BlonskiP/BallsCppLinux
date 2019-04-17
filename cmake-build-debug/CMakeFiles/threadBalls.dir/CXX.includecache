@@ -20,15 +20,17 @@ Map.h
 Ball.h
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.h
 
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.cpp
+Map.h
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.h
+Wall.h
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Wall.h
+
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.h
 vector
 -
 CollidingItem.h
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/CollidingItem.h
-
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Wall.cpp
-Wall.h
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Wall.h
 
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Wall.h
 CollidingItem.h
