@@ -8,6 +8,8 @@
 
 #include "CollidingItem.h"
 #include <ncurses.h>
+#include <algorithm>
+
 class Wall : public CollidingItem {
 
 public:

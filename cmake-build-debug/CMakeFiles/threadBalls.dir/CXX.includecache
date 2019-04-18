@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.cpp
+iostream
+-
+Ball.h
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.h
+PrintManager.h
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/PrintManager.h
+
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.h
 unistd.h
 -
@@ -20,21 +28,25 @@ Map.h
 Ball.h
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.h
 
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.cpp
-Map.h
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.h
-Wall.h
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Wall.h
-
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.h
 vector
 -
 CollidingItem.h
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/CollidingItem.h
 
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Wall.h
-CollidingItem.h
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/CollidingItem.h
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/PrintManager.h
 ncurses.h
+-
+Map.h
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.h
+Ball.h
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.h
+unistd.h
+-
+vector
+-
+thread
+-
+condition_variable
 -
 

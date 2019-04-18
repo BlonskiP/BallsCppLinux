@@ -3,17 +3,27 @@
 //
 
 #include "Wall.h"
+#include <algorithm>
+using namespace std;
  void Wall::colision(Ball &ball) {
     //change ball directions
     ball.dir[0]*=(-1);
     ball.dir[1]*=(-1);
 }
  bool Wall::isColliding(Ball &ball) {
-
-     if(ball.x>=startX && ball.x <=endX){
-         if(ball.y>=startY && ball.y<=endX){
-             return true;}}
+    int det =
+            (startX*endY)+(startY*ball.x)+(endX*ball.y)
+            -(ball.x*endY)-(ball.y*startX)-(endX*startY);
+    if(det!=0) return false;
+        if((min(startX,endX) <= ball.x)&&(ball.x<=max(startX,endX))&&
+                (min(startY,endY) <= ball.y)&&(ball.y<=max(startY,endY)))
+     return true;
+     else
      return false;
+
+//http://www.algorytm.org/geometria-obliczeniowa/przynaleznosc-punktu-do-odcinka.html
+
+
 
 }
 
