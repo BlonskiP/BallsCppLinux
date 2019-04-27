@@ -150,6 +150,33 @@ Ball.cpp.s:
 	$(MAKE) -f CMakeFiles/threadBalls.dir/build.make CMakeFiles/threadBalls.dir/Ball.cpp.s
 .PHONY : Ball.cpp.s
 
+BallTrap.o: BallTrap.cpp.o
+
+.PHONY : BallTrap.o
+
+# target to build an object file
+BallTrap.cpp.o:
+	$(MAKE) -f CMakeFiles/threadBalls.dir/build.make CMakeFiles/threadBalls.dir/BallTrap.cpp.o
+.PHONY : BallTrap.cpp.o
+
+BallTrap.i: BallTrap.cpp.i
+
+.PHONY : BallTrap.i
+
+# target to preprocess a source file
+BallTrap.cpp.i:
+	$(MAKE) -f CMakeFiles/threadBalls.dir/build.make CMakeFiles/threadBalls.dir/BallTrap.cpp.i
+.PHONY : BallTrap.cpp.i
+
+BallTrap.s: BallTrap.cpp.s
+
+.PHONY : BallTrap.s
+
+# target to generate assembly for a file
+BallTrap.cpp.s:
+	$(MAKE) -f CMakeFiles/threadBalls.dir/build.make CMakeFiles/threadBalls.dir/BallTrap.cpp.s
+.PHONY : BallTrap.cpp.s
+
 CollidingItem.o: CollidingItem.cpp.o
 
 .PHONY : CollidingItem.o
@@ -297,6 +324,9 @@ help:
 	@echo "... Ball.o"
 	@echo "... Ball.i"
 	@echo "... Ball.s"
+	@echo "... BallTrap.o"
+	@echo "... BallTrap.i"
+	@echo "... BallTrap.s"
 	@echo "... CollidingItem.o"
 	@echo "... CollidingItem.i"
 	@echo "... CollidingItem.s"

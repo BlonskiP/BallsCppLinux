@@ -4,6 +4,7 @@
 
 #include "Map.h"
 #include "Wall.h"
+#include "BallTrap.h"
 
 Map::Map(int x, int y) {
     sizeX= x;
@@ -23,7 +24,7 @@ Map::Map(int x, int y) {
                 charMap[i][k]=' ';
         }
 
-
+      CollidingItem* ballTrap = new BallTrap(10,40,10,7);
       CollidingItem* rightWall = new Wall(0,20,50,50);
       CollidingItem* leftWall = new Wall(0,20,0,0);
       CollidingItem* upWall = new Wall(0,0,0,50);
@@ -32,6 +33,7 @@ Map::Map(int x, int y) {
       colItemsVector.push_back(leftWall);
       colItemsVector.push_back(upWall);
       colItemsVector.push_back(downWall);
+      colItemsVector.push_back(ballTrap);
 }
 
 void Map::collisionCheck(Ball &ball) {

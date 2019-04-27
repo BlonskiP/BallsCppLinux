@@ -90,6 +90,12 @@
 		<Unit filename="/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Ball.h">
 			<Option target="threadBalls"/>
 		</Unit>
+		<Unit filename="/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/BallTrap.cpp">
+			<Option target="threadBalls"/>
+		</Unit>
+		<Unit filename="/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/BallTrap.h">
+			<Option target="threadBalls"/>
+		</Unit>
 		<Unit filename="/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/CollidingItem.cpp">
 			<Option target="threadBalls"/>
 		</Unit>

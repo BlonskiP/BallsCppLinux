@@ -15,6 +15,26 @@ vector
 -
 Map.h
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Map.h
+condition_variable
+-
+
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/BallTrap.cpp
+BallTrap.h
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/BallTrap.h
+
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/BallTrap.h
+CollidingItem.h
+/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/CollidingItem.h
+vector
+-
+ncurses.h
+-
+thread
+-
+condition_variable
+-
+algorithm
+-
 
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/CollidingItem.h
 Ball.h
@@ -25,20 +45,4 @@ vector
 -
 CollidingItem.h
 /home/wilk/Desktop/repos/threadBalls/BallsCppLinux/CollidingItem.h
-
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Wall.cpp
-Wall.h
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Wall.h
-algorithm
--
-
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/Wall.h
-CollidingItem.h
-/home/wilk/Desktop/repos/threadBalls/BallsCppLinux/CollidingItem.h
-ncurses.h
--
-algorithm
--
-cstdlib
--
 

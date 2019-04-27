@@ -79,7 +79,7 @@ void PrintManager::escapeListen() {
         if(getch()=='q')
         {
         run=false;
-            PrintManager::cv_run.notify_all();
+        PrintManager::cv_run.notify_all();
         }
     }
 }

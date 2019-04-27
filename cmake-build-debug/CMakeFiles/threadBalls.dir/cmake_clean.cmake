@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/threadBalls.dir/Map.cpp.o"
   "CMakeFiles/threadBalls.dir/CollidingItem.cpp.o"
   "CMakeFiles/threadBalls.dir/Wall.cpp.o"
+  "CMakeFiles/threadBalls.dir/BallTrap.cpp.o"
   "threadBalls.pdb"
   "threadBalls"
 )

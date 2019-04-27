@@ -3,9 +3,16 @@
 
 CMakeFiles/threadBalls.dir/Ball.cpp.o: ../Ball.cpp
 CMakeFiles/threadBalls.dir/Ball.cpp.o: ../Ball.h
+CMakeFiles/threadBalls.dir/Ball.cpp.o: ../BallTrap.h
 CMakeFiles/threadBalls.dir/Ball.cpp.o: ../CollidingItem.h
 CMakeFiles/threadBalls.dir/Ball.cpp.o: ../Map.h
 CMakeFiles/threadBalls.dir/Ball.cpp.o: ../PrintManager.h
+
+CMakeFiles/threadBalls.dir/BallTrap.cpp.o: ../Ball.h
+CMakeFiles/threadBalls.dir/BallTrap.cpp.o: ../BallTrap.cpp
+CMakeFiles/threadBalls.dir/BallTrap.cpp.o: ../BallTrap.h
+CMakeFiles/threadBalls.dir/BallTrap.cpp.o: ../CollidingItem.h
+CMakeFiles/threadBalls.dir/BallTrap.cpp.o: ../Map.h
 
 CMakeFiles/threadBalls.dir/CollidingItem.cpp.o: ../Ball.h
 CMakeFiles/threadBalls.dir/CollidingItem.cpp.o: ../CollidingItem.cpp
@@ -13,6 +20,7 @@ CMakeFiles/threadBalls.dir/CollidingItem.cpp.o: ../CollidingItem.h
 CMakeFiles/threadBalls.dir/CollidingItem.cpp.o: ../Map.h
 
 CMakeFiles/threadBalls.dir/Map.cpp.o: ../Ball.h
+CMakeFiles/threadBalls.dir/Map.cpp.o: ../BallTrap.h
 CMakeFiles/threadBalls.dir/Map.cpp.o: ../CollidingItem.h
 CMakeFiles/threadBalls.dir/Map.cpp.o: ../Map.cpp
 CMakeFiles/threadBalls.dir/Map.cpp.o: ../Map.h

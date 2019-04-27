@@ -9,7 +9,10 @@
 #include <thread>
 #include <vector>
 #include "Map.h"
+#include <condition_variable>
 
+
+class BallTrap;
 class Map;
 class Ball {
 public:
@@ -19,9 +22,11 @@ public:
     int sleepTime;
     char symbol='o';
     std::thread movThread;
+    std::condition_variable cvBallSleep;
     std::vector<int> dir;
     Map *map;
     void moveForward(int xForward, int yForward);
+
 private:
     void move();
 

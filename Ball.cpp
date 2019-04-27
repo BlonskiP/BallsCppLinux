@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Ball.h"
 #include "PrintManager.h"
+#include "BallTrap.h"
 
 using namespace std;
 Ball::Ball(int x, int y, Map *map, int sleepTime) {
@@ -78,5 +79,9 @@ void Ball::checkDirections() {
 
 
 }
+
+
+
+
 
 
