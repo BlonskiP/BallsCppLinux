@@ -13,7 +13,7 @@ Ball::Ball(int x, int y, Map *map, int sleepTime) {
     this->map=map;
     movThread=thread(&Ball::move,this);
     int xdir=0;
-    int ydir=1;
+    int ydir=0;
     while(xdir==0 && ydir==0){xdir=rand() %3;ydir=rand() %3;}
     dir.insert(dir.begin(),xdir);
     dir.insert(dir.end(),ydir);
@@ -75,16 +75,7 @@ void Ball::moveForward(int xForward, int yForward) {
 }
 
 void Ball::checkDirections() {
-    if(x>=map->sizeX-1 || x<=1)
-    {
-        dir[0]*=(-1);
-    }
 
-
-    if(y>=map->sizeY-1 || y<=1)
-    {
-        dir[1]*=(-1);
-    }
 
 }
 

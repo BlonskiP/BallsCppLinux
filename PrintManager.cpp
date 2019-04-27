@@ -19,11 +19,10 @@ PrintManager::PrintManager(int amount) {
     escapeThread=std::thread(&PrintManager::escapeListen,this);
     for(int i=0;i<amount;i++)
     {
-       // randX=rand() % 17 +2;
-       // randY=rand() % 47 +2;
-        randX=10;
-        randY=10;
-
+        randX=rand() % 17 +2;
+       randY=rand() % 47 +2;
+        //randX=10;
+//        randY=10;
     balls.push_back(new Ball(randX,randY,map,i));
 
     }

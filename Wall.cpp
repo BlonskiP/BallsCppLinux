@@ -6,9 +6,18 @@
 #include <algorithm>
 using namespace std;
  void Wall::colision(Ball &ball) {
-    //change ball directions
-    ball.dir[0]*=(-1);
-    ball.dir[1]*=(-1);
+
+     //To do mathematic collision. Random colisoin as placehoder
+        ball.dir[0]*=-1;
+        ball.dir[1]*=-1;
+        int randX = rand()%3 +1;
+        int randY = rand()%3 +1;
+        if(ball.dir[0]>0) ball.dir[0]=randX;
+        else ball.dir[0]=-randX;
+        if(ball.dir[1]>0) ball.dir[0]=randY;
+        else ball.dir[1]= -randY;
+
+
 }
  bool Wall::isColliding(Ball &ball) {
     int det =
@@ -16,8 +25,15 @@ using namespace std;
             -(ball.x*endY)-(ball.y*startX)-(endX*startY);
     if(det!=0) return false;
         if((min(startX,endX) <= ball.x)&&(ball.x<=max(startX,endX))&&
-                (min(startY,endY) <= ball.y)&&(ball.y<=max(startY,endY)))
-     return true;
+                (min(startY,endY) <= ball.y)&&(ball.y<=max(startY,endY))){
+            int x=0;
+            int y=0;
+            if(ball.dir[0]>0)x=-1;
+            if(ball.dir[1]>0)y=-1;
+            if(ball.dir[0]<0)x=1;
+            if(ball.dir[1]<0)y=1;
+            ball.moveForward(x,y);
+     return true;}
      else
      return false;
 

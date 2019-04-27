@@ -21,9 +21,10 @@ public:
     std::thread movThread;
     std::vector<int> dir;
     Map *map;
+    void moveForward(int xForward, int yForward);
 private:
     void move();
-    void moveForward(int xForward, int yForward);
+
     void checkDirections();
 };
 

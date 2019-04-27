@@ -9,7 +9,7 @@
 #include "CollidingItem.h"
 #include <ncurses.h>
 #include <algorithm>
-
+#include  <cstdlib>
 class Wall : public CollidingItem {
 
 public:
