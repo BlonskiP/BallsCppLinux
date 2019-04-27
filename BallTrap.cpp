@@ -35,6 +35,11 @@ void BallTrap::drawItem() {
     }
     refresh();
 }
+// ball is you (the thread)
+// lock mutex. check if queue is full.
+// If queue isn't full add yourself to queue, unlock mutex.
+// And wait until you're poped
+// If queue is full. Pop somebody from queue
 
 void BallTrap::colision(Ball &ball) {
     ball.moveForward(ball.dir[0],ball.dir[1]);
