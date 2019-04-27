@@ -22,7 +22,7 @@ public:
     int sleepTime;
     char symbol='o';
     std::thread movThread;
-    std::condition_variable cvBallSleep;
+public: bool isTraped=false;
     std::vector<int> dir;
     Map *map;
     void moveForward(int xForward, int yForward);

@@ -42,18 +42,33 @@ void BallTrap::drawItem() {
 // If queue is full. Pop somebody from queue
 
 void BallTrap::colision(Ball &ball) {
-    ball.moveForward(ball.dir[0],ball.dir[1]);
     std::unique_lock<std::mutex> lck;
-    if(ballQueue.size()<=trapCapacity) {
-        ballQueue.push_back(&ball);
-        ball.cvBallSleep.wait(lck,[this,&ball]{return queueContains(&ball);}); // wait as long as ball is in queue
-    }
-    else{
-         ballQueue.pop_back();}
-    lck.unlock();
-}
+    
+    ball.isTraped=true;
+    int x,y;
+    if(ball.dir[0]>0)x=1;
+    else x=-1;
+    if(ball.dir[1]>0)y=1;
+    else y=-1;
+    ball.moveForward(x,y);
 
+    //////////////////
+
+    ballQueue.push_back(&ball);
+    if(ballQueue.size()<trapCapacity)
+    {
+        cvBallSleep.wait(lck,[this,&ball]{return !queueContains(&ball);});
+    } else
+    {
+        ballQueue.pop_back();
+        ball.isTraped= false;
+        while(isColliding(ball))
+        ball.moveForward(-x,-y);
+
+    }
+}
 bool BallTrap::isColliding(Ball &ball) {
+    if(!ball.isTraped)
     if(ball.x>= xLeftUpCorner && ball.x<=xLeftUpCorner+wallSize)
         if(ball.y<=yLeftUpCorner && ball.y<=yLeftUpCorner+wallSize)
             return true;

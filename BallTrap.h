@@ -20,7 +20,7 @@ class BallTrap : public CollidingItem {
     int trapCapacity;
 public:  std::vector<Ball*> ballQueue;
 public:  std::mutex mutBallTrap;
-
+    std::condition_variable cvBallSleep;
     bool isColliding(Ball &ball) override;
     void colision(Ball &ball) override;
     void drawItem() override;
