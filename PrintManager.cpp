@@ -18,11 +18,11 @@ PrintManager::PrintManager(int amount) {
     int randY;
     escapeThread=std::thread(&PrintManager::escapeListen,this);
     for(int i=0;i<amount;i++)
-    {
-       // randX=rand() % 17 +2;
-     //  randY=rand() % 47 +2;
-          randX=10;
-          randY=40;
+    { // randX=rand() % 17 +2;
+
+    //   randY=rand() % 47 +2;
+          randX=15;
+          randY=20;
     balls.push_back(new Ball(randX,randY,map,i));
 
     }
@@ -80,6 +80,10 @@ void PrintManager::escapeListen() {
         {
         run=false;
         PrintManager::cv_run.notify_all();
+        for(Ball *& ball: balls)
+        {
+            ball->cvBallSleep.notify_all();
+        }
         }
     }
 }

@@ -14,8 +14,8 @@ Ball::Ball(int x, int y, Map *map, int sleepTime) {
     this->map=map;
     movThread=thread(&Ball::move,this);
     int xdir=0;
-    int ydir=0;
-    while(xdir==0 && ydir==0){xdir=rand() %3;ydir=rand() %3;}
+    int ydir=1;
+    //while(xdir==0 && ydir==0){xdir=rand() %3;ydir=rand() %3;}
     dir.insert(dir.begin(),xdir);
     dir.insert(dir.end(),ydir);
     if(rand()%10 /5)

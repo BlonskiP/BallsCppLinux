@@ -17,12 +17,13 @@ class Map;
 class Ball {
 public:
     Ball(int x, int y, Map *map,int sleepTime);
-    int x;
-    int y;
+public: int x;
+public: int y;
     int sleepTime;
     char symbol='o';
     std::thread movThread;
 public: bool isTraped=false;
+    std::condition_variable cvBallSleep;
     std::vector<int> dir;
     Map *map;
     void moveForward(int xForward, int yForward);

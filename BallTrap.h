@@ -18,13 +18,15 @@ class BallTrap : public CollidingItem {
     int yLeftUpCorner;
     int wallSize;
     int trapCapacity;
+    
 public:  std::vector<Ball*> ballQueue;
 public:  std::mutex mutBallTrap;
-    std::condition_variable cvBallSleep;
+
     bool isColliding(Ball &ball) override;
     void colision(Ball &ball) override;
     void drawItem() override;
     bool queueContains(Ball *ball);
+    void freeBall();
 
 public:
     BallTrap(int xLeftUpCorner, int yLeftUpCorner, int wallSize , int capacity);

@@ -24,7 +24,7 @@ Map::Map(int x, int y) {
                 charMap[i][k]=' ';
         }
 
-      CollidingItem* ballTrap = new BallTrap(10,40,10,7);
+      CollidingItem* ballTrap = new BallTrap(10,40,10,1);
       CollidingItem* rightWall = new Wall(0,20,50,50);
       CollidingItem* leftWall = new Wall(0,20,0,0);
       CollidingItem* upWall = new Wall(0,0,0,50);

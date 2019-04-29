@@ -8,14 +8,9 @@ using namespace std;
  void Wall::colision(Ball &ball) {
 
      //To do mathematic collision. Random colisoin as placehoder
-        ball.dir[0]*=-1;
-        ball.dir[1]*=-1;
-        int randX = rand()%3 +1;
-        int randY = rand()%3 +1;
-        if(ball.dir[0]>0) ball.dir[0]=randX;
-        else ball.dir[0]=-randX;
-        if(ball.dir[1]>0) ball.dir[0]=randY;
-        else ball.dir[1]= -randY;
+
+       ball.dir[0]*=-1;
+       ball.dir[1]*=-1;
 
 
 }

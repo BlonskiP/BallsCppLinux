@@ -5,7 +5,7 @@ int main()
 {
     srand (time(NULL));
 
-    PrintManager *mgr=new PrintManager(1);
+    PrintManager *mgr=new PrintManager(2);
 
 
     return 0;
