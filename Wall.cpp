@@ -9,8 +9,24 @@ using namespace std;
 
      //To do mathematic collision. Random colisoin as placehoder
 
-       ball.dir[0]*=-1;
-       ball.dir[1]*=-1;
+      if(this->startY==this->endY) //vertical wall
+      {
+          int y=this->endY;
+          if(ball.dir[1]>0)
+              ball.dir[1]*=-1;
+          else
+          if(ball.dir[1]<0)
+              ball.dir[1]*=-1;
+      }
+      if(this->startX==this->endX)
+      {
+          int x= this->endX;
+          if(ball.dir[0]>0)
+              ball.dir[0]*=-1;
+          else
+              if(ball.dir[0]<0)
+                  ball.dir[0]*=-1;
+      }
 
 
 }

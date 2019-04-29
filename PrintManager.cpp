@@ -18,14 +18,16 @@ PrintManager::PrintManager(int amount) {
     int randY;
     escapeThread=std::thread(&PrintManager::escapeListen,this);
     for(int i=0;i<amount;i++)
-    { // randX=rand() % 17 +2;
+    {  randX=rand() % 17 +2;
 
-    //   randY=rand() % 47 +2;
-          randX=15;
-          randY=20;
+       randY=rand() % 47 +2;
+          //randX=15;
+        //  randY=20;
     balls.push_back(new Ball(randX,randY,map,i));
 
     }
+    //balls.push_back(new Ball(15,20,map,0));//test balls
+    //balls.push_back(new Ball(16,15,map,1));
 
 
 

@@ -45,9 +45,22 @@ void BallTrap::colision(Ball &ball) {
     std::unique_lock<std::mutex> lck(mutBallTrap);
     
     ball.isTraped=true;
-    ball.dir[0]*=-1;
-    ball.dir[1]*=-1;
-    // move ball here
+
+    int x=0;
+    int y=0;
+    if(ball.dir[0]>0)x++;
+    else x--;
+    if(ball.dir[1]>0)y++;
+    else y--;
+    for(int i=0;i<3;i++) {
+        ball.moveForward(x, y);
+        if(!isColliding(ball))
+        {
+            break;
+
+
+        }
+    }
 
     //////////////////
 
@@ -55,6 +68,8 @@ void BallTrap::colision(Ball &ball) {
     if(ballQueue.size()<=trapCapacity)
     {
         ball.cvBallSleep.wait(lck,[this,&ball]{return !queueContains(&ball);});
+        ball.isTraped=false;
+
     } else
     {
         freeBall();
@@ -86,10 +101,17 @@ bool BallTrap::queueContains(Ball *ball) {
 }
 
 void BallTrap::freeBall() {
-    ballQueue[0]->isTraped=false;
-    ballQueue[0]->x=10;
-    ballQueue[0]->y =10;
+    ballQueue[0]->isTraped = false;
+    ballQueue[0]->dir[0]*=-1;
+    ballQueue[0]->dir[1]*=-1;
+    ballQueue[0]->cvBallSleep.notify_all();
+    while (isColliding(*ballQueue[0]))
+    {
+        ballQueue[0]->moveForward(ballQueue[0]->dir[0],ballQueue[0]->dir[1]);
+    }
     ballQueue.erase(ballQueue.begin());
-    //move untli not coliding
+
+
 
 }
+
